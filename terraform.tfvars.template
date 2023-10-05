@@ -1,0 +1,25 @@
+environment       = "workforce"
+location          = "global"
+workforce_pool_id = "chronicle"
+org_id            = "your org id"
+role              = "roles/chronicle.viewer"
+project_id        = "your project id"
+
+wif_providers = [
+  {
+    provider_id     = "chronicle"
+    select_provider = "saml"
+    provider_config = {
+      idp_metadata_xml = "Your IDP Metadata string. Use my script in build folder to print out string"    }
+  }
+]
+
+attribute_mapping = {
+  "google.subject"       = "assertion.subject"
+  "attribute.first_name" = "assertion.attributes.first_name[0]"
+  "attribute.last_name"  = "assertion.attributes.last_name[0]"
+  "attribute.user_email" = "assertion.attributes.user_email[0]"
+  "google.groups"        = "assertion.attributes.group"
+}
+
+
