@@ -1,18 +1,10 @@
-environment       = "workforce"
+project_id        = "your project id"
+org_id            = "your org id"
+idp_metadata_xml = "Your IDP Metadata string. Use my script in build folder to print out string"    
 location          = "global"
 workforce_pool_id = "chronicle"
-org_id            = "your org id"
-role              = "roles/chronicle.viewer"
-project_id        = "your project id"
-
-wif_providers = [
-  {
-    provider_id     = "chronicle"
-    select_provider = "saml"
-    provider_config = {
-      idp_metadata_xml = "Your IDP Metadata string. Use my script in build folder to print out string"    }
-  }
-]
+workforce_provider_id = "chronicle"
+idp_metadata_xml = "Your IDP Metadata string. Use my script in build folder to print out string"    
 
 attribute_mapping = {
   "google.subject"       = "assertion.subject"

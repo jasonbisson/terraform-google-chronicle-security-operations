@@ -16,12 +16,18 @@
 
 
 variable "project_id" {
-  description = "Google Cloud Project where Identity pool will be deployed"
+  description = "Google Cloud Project where Workfore Identity pool and provider will be deployed"
 }
 
 variable "enable_apis" {
   description = "Whether to actually enable the APIs. If false, this module is a no-op."
   default     = "true"
+}
+
+variable "activate_apis" {
+  description = "The list of apis to activate for Cloud Function"
+  default     = ["sts.googleapis.com", "iamcredentials.googleapis.com", "cloudresourcemanager.googleapis.com", "iam.googleapis.com", "cloudasset.googleapis.com", "securitycenter.googleapis.com", "pubsub.googleapis.com", "compute.googleapis.com", "recommender.googleapis.com", "policyanalyzer.googleapis.com"]
+  type        = list(string)
 }
 
 variable "disable_services_on_destroy" {
@@ -36,20 +42,6 @@ variable "disable_dependent_services" {
   type        = string
 }
 
-variable "activate_apis" {
-  description = "The list of apis to activate for Cloud Function"
-  default     = ["sts.googleapis.com", "iamcredentials.googleapis.com", "cloudresourcemanager.googleapis.com", "iam.googleapis.com", "cloudasset.googleapis.com", "securitycenter.googleapis.com", "pubsub.googleapis.com", "compute.googleapis.com", "recommender.googleapis.com", "policyanalyzer.googleapis.com"]
-  type        = list(string)
-}
-
-
-variable "environment" {
-  description = "Environment tag to help identify the entire deployment"
-  type        = string
-  default     = "workforce"
-}
-
-
 variable "org_id" {
   description = "The numeric organization id"
   type        = string
@@ -57,12 +49,22 @@ variable "org_id" {
 
 variable "workforce_pool_id" {
   type        = string
-  description = "workforce"
+  description = "workforce pool id"
+}
+
+variable "workforce_provider_id" {
+  type        = string
+  description = "workforce provider id"
+}
+
+variable "idp_metadata_xml" {
+  type        = string
+  description = "SAML idp_metadata_xml. Use print_metadata_xml.py script in build directory to print out XML in one string"
 }
 
 variable "location" {
   type        = string
-  description = "Location of the Pool"
+  description = "Location of the Workforce Pool"
 }
 
 variable "display_name" {
@@ -80,7 +82,7 @@ variable "description" {
 variable "disabled" {
   type        = bool
   default     = false
-  description = "Enable the Pool"
+  description = "Enable the Workforce Pool"
 }
 
 variable "session_duration" {
@@ -89,16 +91,10 @@ variable "session_duration" {
   description = "Session Duration"
 }
 
-variable "wif_providers" {
-  type        = list(any)
-  description = "Provider config"
-}
-
 variable "attribute_mapping" {
   type        = map(string)
   description = "attribute list"
 }
-
 
 variable "prefix" {
   description = "Prefix member or group or serviceaccount"
@@ -107,7 +103,8 @@ variable "prefix" {
 }
 
 variable "role" {
-  description = "IAM role for Workforce testing"
+  description = "IAM role for Chronicle Viewer"
   type        = string
+  default     = "roles/chronicle.viewer"
 }
 
