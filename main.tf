@@ -66,7 +66,7 @@ resource "google_project_organization_policy" "all_service_account_keys" {
 
 resource "google_service_account" "soar_to_google_cloud" {
   project      = var.project_id
-  account_id   = "soar2googlecloud"
+  account_id   = var.soar_service_account
   display_name = "Service Account for Chronicle SOAR to connect to Google Cloud"
 }
 
@@ -75,7 +75,7 @@ resource "google_organization_iam_custom_role" "iam_custom_role" {
   role_id     = "SOAR_Custom_Role"
   title       = "SOAR Custom IAM Role"
   description = "Custom IAM role for managing connections from Chronicle SOAR to Nexus"
-  permissions = ["cloudasset.assets.searchAllResources", "compute.instances.get", "compute.instances.list", "compute.instances.stop", "iam.serviceAccounts.disable", "policyanalyzer.serviceAccountLastAuthenticationActivities.query", "pubsub.subscriptions.consume", "pubsub.subscriptions.create", "pubsub.subscriptions.delete", "pubsub.subscriptions.get", "pubsub.subscriptions.getIamPolicy", "pubsub.subscriptions.list", "pubsub.subscriptions.setIamPolicy", "pubsub.subscriptions.update", "pubsub.topics.attachSubscription", "pubsub.topics.create", "pubsub.topics.delete", "pubsub.topics.detachSubscription", "pubsub.topics.get", "pubsub.topics.getIamPolicy", "pubsub.topics.list", "pubsub.topics.publish", "pubsub.topics.setIamPolicy", "pubsub.topics.update", "pubsub.topics.updateTag", "recommender.iamPolicyRecommendations.get", "recommender.iamPolicyRecommendations.list", "recommender.iamPolicyRecommendations.update", "resourcemanager.organizations.getIamPolicy", "securitycenter.assets.list", "securitycenter.findingexternalsystems.update", "securitycenter.findings.list", "securitycenter.findings.setState", "securitycenter.notificationconfig.create", "securitycenter.notificationconfig.get", "securitycenter.notificationconfig.update"]
+  permissions = ["cloudasset.assets.searchAllResources", "compute.instances.get", "compute.instances.list", "compute.instances.stop","compute.zones.list","iam.serviceAccounts.disable", "policyanalyzer.serviceAccountLastAuthenticationActivities.query", "pubsub.subscriptions.consume", "pubsub.subscriptions.create", "pubsub.subscriptions.delete", "pubsub.subscriptions.get", "pubsub.subscriptions.getIamPolicy", "pubsub.subscriptions.list", "pubsub.subscriptions.setIamPolicy", "pubsub.subscriptions.update", "pubsub.topics.attachSubscription", "pubsub.topics.create", "pubsub.topics.delete", "pubsub.topics.detachSubscription", "pubsub.topics.get", "pubsub.topics.getIamPolicy", "pubsub.topics.list", "pubsub.topics.publish", "pubsub.topics.setIamPolicy", "pubsub.topics.update", "pubsub.topics.updateTag", "recommender.iamPolicyRecommendations.get", "recommender.iamPolicyRecommendations.list", "recommender.iamPolicyRecommendations.update", "resourcemanager.organizations.getIamPolicy", "securitycenter.assets.list", "securitycenter.findingexternalsystems.update", "securitycenter.findings.list", "securitycenter.findings.setState", "securitycenter.notificationconfig.create", "securitycenter.notificationconfig.get", "securitycenter.notificationconfig.update"]
   stage       = "GA"
 }
 

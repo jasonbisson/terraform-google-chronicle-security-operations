@@ -108,3 +108,9 @@ variable "role" {
   default     = "roles/chronicle.viewer"
 }
 
+variable "soar_service_account" {
+  description = "Name of Service Account for SOAR to Google Cloud"
+  type        = string
+  default     = "soar2googlecloud"
+}
+
