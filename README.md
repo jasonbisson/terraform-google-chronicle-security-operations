@@ -42,7 +42,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 - ACS URL: https://auth.backstory.chronicle.security/signin-callback/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 - Entity ID: https://iam.googleapis.com/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 
-<img src="diagram/acsentity.png" width="700" height="400">
+<img src="diagram/acsentity.png" width="800" height="400">
 
 
 ## Requirements
