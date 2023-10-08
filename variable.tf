@@ -59,7 +59,7 @@ variable "workforce_provider_id" {
 
 variable "idp_metadata_xml" {
   type        = string
-  description = "How to print out in one string. Copy print_metadata_xml.py script under build directory to /tmp with your idp metadata file named metadata.xml. Run script to print out in one line"
+  description = "How to print out in one string. Copy print_metadata_xml.py script under build directory to /tmp with your idp metadata file named GoogleIDPMetadata.xml. Run script to print out in one line"
 }
 
 variable "location" {
