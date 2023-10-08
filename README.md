@@ -52,6 +52,33 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 9. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="700" height="400">
 
+## Usage
+
+### 
+1. Clone repo
+```
+git clone https://github.com/jasonbisson/terraform-google-chronicle-security-operations.git
+```
+
+2. Rename and update required variables in terraform.tvfars.template
+```
+mv terraform.tfvars.template terraform.tfvars
+#Update required variables
+```
+
+3. Execute Terraform commands with existing identity (human or service account) to build Workforce Identity Infrastructure.
+```
+cd ~/terraform-google-chronicle-security-operations/
+terraform init
+terraform plan
+terraform apply
+Copy the output of unique Workforce Pool ID to update the ACS & Entity values in Custom SAML app
+```
+
+4. Update ACS & Entity values of Custom SAML app in Google admin console. https://admin.google.com/
+
+<img src="diagram/updateacsentity.png" width="800" height="400">
+
 ## Requirements
 
 ### Software
