@@ -25,22 +25,22 @@ Create a Google Cloud Project with [Project Factory](https://github.com/terrafor
 
 To autheticate into Chronicle a custom SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the native Workspace option, but will show required attribues and groups required.
 
-- Login to Google admin console. https://admin.google.com/
+1. Login to Google admin console. https://admin.google.com/
 
-- Go to Directory and Groups
+2. Go to Directory and Groups
 
-- Create a Google Group "Chronicle-admins" (Copy and paste name) and add members to the group
+3. Create a Google Group "Chronicle-admins" (Copy and paste name) and add members to the group
 
-- Go to Apps and click on Web and Mobile Apps
+4. Go to Apps and click on Web and Mobile Apps
 <img src="diagram/webmobile.png" width="300" height="400">
 
-- Click on add custom SAML app
+5. Click on add custom SAML app
 <img src="diagram/customsaml.png" width="400" height="400">
 
-- Enter application details that calls out Chronicle Authentication
+6. Enter application details that calls out Chronicle Authentication
 <img src="diagram/appdetails.png" width="600" height="400">
 
-- Download Metadata XML file for Workforce Integration
+7. Download Metadata XML file for Workforce Integration
 <img src="diagram/downloadmetadata.png" width="700" height="400">
 
 - Enter placeholder (Unique Workforce pool id will be created in next step) values for ACS URL and Entity ID. 
@@ -49,7 +49,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 
 <img src="diagram/acsentity.png" width="800" height="400">
 
-- Update the attribues with the identical names (High rate of failure in this step).
+8. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="700" height="400">
 
 ## Requirements
