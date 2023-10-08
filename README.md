@@ -27,6 +27,8 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 
 - Login to Google admin console. https://admin.google.com/
 
+- Go to Directory and Groups
+
 - Create a Google Group "Chronicle-admins" (Copy and paste name) and add members to the group
 
 - Go to Apps and click on Web and Mobile Apps
@@ -47,7 +49,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 
 <img src="diagram/acsentity.png" width="800" height="400">
 
-- Update the attribues with the identical names in image (High rate of failure in this step).
+- Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="700" height="400">
 
 ## Requirements
