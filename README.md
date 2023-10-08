@@ -77,7 +77,7 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 
 4. Update ACS & Entity values of Custom SAML app in Google admin console. https://admin.google.com/
 
-<img src="diagram/updateacsentity.png" width="900" height="400">
+<img src="diagram/updateacsentity.png" width="900" height="200">
 
 ## Requirements
 
