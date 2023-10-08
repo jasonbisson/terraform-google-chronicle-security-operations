@@ -28,7 +28,8 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 - Login to Google admin console. https://admin.google.com/
 - Go to Apps and click on Web and Mobile Apps
 <img src="diagram/webmobile.png" width="400" height="400">
-- Clink on add custom SAML app
+
+- Click on add custom SAML app
 <img src="diagram/customsaml.png" width="400" height="400">
 
 
