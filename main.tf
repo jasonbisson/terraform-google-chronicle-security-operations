@@ -56,9 +56,17 @@ resource "google_project_iam_member" "chronicle_viewer" {
   depends_on = [google_iam_workforce_pool.pool]
 }
 
-resource "google_project_organization_policy" "all_service_account_keys" {
+resource "google_project_organization_policy" "enable_service_account_keys" {
   project    = var.project_id
   constraint = "iam.disableServiceAccountKeyCreation"
+  boolean_policy {
+    enforced = false
+  }
+}
+
+resource "google_project_organization_policy" "enable_service_account_creation" {
+  project    = var.project_id
+  constraint = "iam.disableServiceAccountCreation"
   boolean_policy {
     enforced = false
   }
@@ -68,6 +76,7 @@ resource "google_service_account" "soar_to_google_cloud" {
   project      = var.project_id
   account_id   = var.soar_service_account
   display_name = "Service Account for Chronicle SOAR to connect to Google Cloud"
+  depends_on = [google_project_organization_policy.enable_service_account_creation]
 }
 
 resource "google_organization_iam_custom_role" "iam_custom_role" {

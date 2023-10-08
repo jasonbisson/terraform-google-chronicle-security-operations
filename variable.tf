@@ -16,7 +16,7 @@
 
 
 variable "project_id" {
-  description = "Google Cloud Project where Workfore Identity pool and provider will be deployed"
+  description = "Google Cloud Project where Workforce Identity pool and provider will be deployed"
 }
 
 variable "enable_apis" {
@@ -59,7 +59,7 @@ variable "workforce_provider_id" {
 
 variable "idp_metadata_xml" {
   type        = string
-  description = "SAML idp_metadata_xml. Use print_metadata_xml.py script in build directory to print out XML in one string"
+  description = "How to print out in one string. Copy print_metadata_xml.py script under build directory to /tmp with your idp metadata file named metadata.xml. Run script to print out in one line"
 }
 
 variable "location" {
