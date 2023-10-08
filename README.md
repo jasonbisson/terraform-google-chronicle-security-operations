@@ -75,7 +75,7 @@ terraform apply
 Copy the output of unique Workforce Pool ID to update the ACS & Entity values in Custom SAML app
 ```
 
-4. Update ACS & Entity values of Custom SAML app in Google admin console. https://admin.google.com/
+4. Update ACS & Entity values of Custom SAML app with Workforce Pool ID in Google admin console. https://admin.google.com/
 
 <img src="diagram/updateacsentity.png" width="900" height="200">
 
