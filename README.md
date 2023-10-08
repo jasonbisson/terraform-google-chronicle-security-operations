@@ -35,6 +35,8 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 - Enter application details that calls out Chronicle Authentication
 <img src="diagram/appdetails.png" width="600" height="400">
 
+- Download Metadata XML file for Workforce Integration
+<img src="diagram/downloadmetadata.png" width="600" height="400">
 
 ## Requirements
 
