@@ -26,7 +26,7 @@ Create a Google Cloud Project with [Project Factory](https://github.com/terrafor
 To autheticate into Chronicle a custom SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the native Workspace option, but will show required attribues and groups required.
 
 - Login to Google admin console. https://admin.google.com/
-![Go to Apps -> Web and Mobile Apps](diagram/webmobile.png? width=25)
+![Go to Apps -> Web and Mobile Apps](diagram/webmobile.png?width=25)
 
 
 ## Requirements
