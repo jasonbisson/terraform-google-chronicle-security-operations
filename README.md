@@ -79,6 +79,9 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 
 <img src="diagram/updateacsentity.png" width="900" height="200">
 
+
+5. 
+
 ## Requirements
 
 ### Software
@@ -95,4 +98,7 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 - Account running terraform should be a member of group provided in `group_org_admins` variable, otherwise they will loose `roles/resourcemanager.projectCreator` access. Additional members can be added by using the `org_project_creators` variable.
 
 
-gcloud iam service-accounts keys create - --iam-account="soar2googlecloud@prj-b-cicd-ogtp.iam.gserviceaccount.com"
+export service_account_name="Unique Service Account name between 5-30 characters"
+export project_id="Your Chronicle Google Project ID"
+gcloud iam service-accounts keys create - --iam-account="${service_account_name}@${project_id}.iam.gserviceaccount.com"
+
