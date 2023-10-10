@@ -33,3 +33,8 @@ output "service_account" {
   description = "Name of SOAR Service Account to access Google Cloud Organization"
   value = google_service_account.soar_to_google_cloud.email
 }
+
+output "project_id" {
+  description = "Name of Google Cloud Project ID for Chronicle resources"
+  value = var.project_id
+}

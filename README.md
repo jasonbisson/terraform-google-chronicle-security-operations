@@ -81,7 +81,11 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 
 
 5. Create a Service Account Key for SOAR Service Account to access Google Cloud
-
+```
+export service_account_name=$(terraform  output -raw service_account)
+export project_id=$(terraform  output -raw project_id)
+gcloud iam service-accounts keys create - --iam-account="${service_account_name}"
+```
 
 ## Requirements
 
@@ -97,9 +101,4 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 - `roles/orgpolicy.policyAdmin` on GCP Organization
 - `roles/billing.admin` on supplied billing account
 - Account running terraform should be a member of group provided in `group_org_admins` variable, otherwise they will loose `roles/resourcemanager.projectCreator` access. Additional members can be added by using the `org_project_creators` variable.
-
-
-export service_account_name="Unique Service Account name between 5-30 characters"
-export project_id="Your Chronicle Google Project ID"
-gcloud iam service-accounts keys create - --iam-account="${service_account_name}@${project_id}.iam.gserviceaccount.com"
 
