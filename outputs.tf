@@ -29,3 +29,7 @@ output "pool_name" {
   value       = google_iam_workforce_pool.pool.name
 }
 
+output "service_account" {
+  description = "Name of SOAR Service Account to access Google Cloud Organization"
+  value = google_service_account.soar_to_google_cloud.email
+}

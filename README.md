@@ -80,7 +80,8 @@ Copy the output of unique Workforce Pool ID to update the ACS & Entity values in
 <img src="diagram/updateacsentity.png" width="900" height="200">
 
 
-5. 
+5. Create a Service Account Key for SOAR Service Account to access Google Cloud
+
 
 ## Requirements
 
