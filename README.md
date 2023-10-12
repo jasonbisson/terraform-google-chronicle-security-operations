@@ -99,6 +99,8 @@ gcloud iam service-accounts keys create - --iam-account="${service_account_name}
 
 - `roles/resourcemanager.organizationAdmin` on GCP Organization
 - `roles/orgpolicy.policyAdmin` on GCP Organization
-- `roles/billing.admin` on supplied billing account
-- Account running terraform should be a member of group provided in `group_org_admins` variable, otherwise they will loose `roles/resourcemanager.projectCreator` access. Additional members can be added by using the `org_project_creators` variable.
-
+- `roles/billing.user` to create Google Cloud project if needed
+- `roles/resourcemanager.projectCreator` Project creator role
+- `roles/iam.workforcePoolAdmin` Workforce Pool Admin
+- `roles/iam.serviceAccountCreator` Create Service accounts and keys
+- `roles/serviceusage.serviceUsageAdmin` Service Usage Admin 
