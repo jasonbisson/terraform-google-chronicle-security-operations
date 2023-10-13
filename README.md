@@ -7,8 +7,8 @@ This repository will deploy the required Google Cloud Infrastructure resources a
 
 The resources/services/activations/deletions that this module will create/trigger in dedicated project for Chronicle:
 - Enable the required Google Cloud API Services
-- Create a Workload Identity Pool 
-- Create a Workload Identity Provider with unique attributes required for Chronicle Security Operations
+- Create a Workforce Identity Pool 
+- Create a Workforce Identity Provider with unique attributes required for Chronicle Security Operations
 - Update IAM policy to link Workforce members to Google Cloud role Chronicle Viewer
 - Disable organizational policy conditions (aka guardrails) to allow the creation of Service Accounts and Keys
 - Create a Service Account for Chronicle SOAR to connect to Google Cloud Organization
