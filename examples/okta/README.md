@@ -56,7 +56,7 @@ terraform plan
 terraform apply
 Copy the output of unique Workforce Pool ID to update the ACS & Entity values in Custom SAML app
 ```
-4. Update (Unique Workforce pool id will be created in next step) values for Single sign-on URL and Audience URI (SP Entity ID) in Okta app
+4. Update (Unique Workforce pool id will be created in next step) values for Single sign-on URL and Audience URI (SP Entity ID) in Okta
 <img src="diagram/updateacsentity.png" width="900" height="200">
 
 
