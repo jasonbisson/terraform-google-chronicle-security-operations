@@ -28,8 +28,11 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 9. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="500" height="400">
 
-10. Save application -> Click Sign On -> Click on View SAML setup instructions
+10. Save application -> Click Sign On -> Click on view SAML setup instructions on right side
 <img src="diagram/samlsetup.png" width="500" height="200">
+
+11. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
+<img src="diagram/copysaml.png" width="500" height="200">
 
 ## Usage
 
