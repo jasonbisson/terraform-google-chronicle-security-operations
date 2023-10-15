@@ -26,7 +26,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 <img src="diagram/signin.png" width="500" height="400">
 
 9. Update the attribues with the identical names (High rate of failure in this step).
-<img src="diagram/attributes.png" width="700" height="400">
+<img src="diagram/attributes.png" width="500" height="400">
 
 10. 
 
