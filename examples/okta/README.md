@@ -17,8 +17,8 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 6. Click on SAML 2.0 and next
 <img src="diagram/saml2.0.png" width="400" height="100">
 
-7. Download Metadata XML file for Workforce Integration
-<img src="diagram/downloadmetadata.png" width="700" height="400">
+7. Update the name and icon for the application
+<img src="diagram/appname.png" width="400" height="100">
 
 8. Enter placeholder (Unique Workforce pool id will be created in next step) values for ACS URL and Entity ID. 
 - ACS URL: https://auth.backstory.chronicle.security/signin-callback/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
