@@ -12,7 +12,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 <img src="diagram/applications.png" width="300" height="400">
 
 5. Click on Create App Integration
-<img src="diagram/appintegration.png" width="200" height="200">
+<img src="diagram/appintegration.png" width="100" height="100">
 
 6. Click on SAML 2.0 and next
 <img src="diagram/saml2.0.png" width="200" height="200">
