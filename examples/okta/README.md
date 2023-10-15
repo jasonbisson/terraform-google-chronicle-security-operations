@@ -28,8 +28,8 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 9. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="500" height="400">
 
-10. Click preview the SAML Assertion and save XML file in temporary directory
-<img src="diagram/samlassertion.png" width="700" height="200">
+10. Save application -> Click Sign On -> Click on View SAML setup instructions
+<img src="diagram/samlsetup.png" width="700" height="200">
 
 ## Usage
 
