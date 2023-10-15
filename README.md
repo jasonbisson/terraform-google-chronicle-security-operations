@@ -52,6 +52,9 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 9. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="700" height="400">
 
+### Alternative Identity providers
+- [Okta Identity provider](/examples/okta/README.md) 
+
 ## Usage
 
 ### 
@@ -86,6 +89,8 @@ export service_account_name=$(terraform  output -raw service_account)
 export project_id=$(terraform  output -raw project_id)
 gcloud iam service-accounts keys create - --iam-account="${service_account_name}"
 ```
+
+
 
 ## Requirements
 
