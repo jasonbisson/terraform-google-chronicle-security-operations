@@ -23,10 +23,12 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 8. Enter placeholders (Unique Workforce pool id will be created in next step) values for Single sign-on URL and Audience URI (SP Entity ID). 
 - Single sign-on URL: https://auth.backstory.chronicle.security/signin-callback/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 - Audience URI (SP Entity ID): https://iam.googleapis.com/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
-<img src="diagram/signin.png" width="400" height="300">
+<img src="diagram/signin.png" width="700" height="400">
 
 9. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="700" height="400">
+
+10. 
 
 ## Usage
 
