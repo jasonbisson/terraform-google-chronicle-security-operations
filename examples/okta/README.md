@@ -9,7 +9,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 3. Create a Google Group "Chronicle-admins" (Copy and paste name) and add People to the group
 
 4. Go to Applications and click on Applications
-<img src="diagram/applications.png" width="300" height="400">
+<img src="diagram/applications.png" width="300" height="200">
 
 5. Click on Create App Integration
 <img src="diagram/appintegration.png" width="300" height="100">
