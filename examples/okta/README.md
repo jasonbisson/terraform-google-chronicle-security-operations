@@ -1,6 +1,6 @@
 # Create Custom SAML Application for Chronicle Authetication 
 
-To autheticate into Chronicle a SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the Okat option, but will show required attribues and groups required.
+To autheticate into Chronicle a SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the Okta option, but will show required attribues and groups required.
 
 1. Login to Okta admin console. https://<Your Okta Instance>>.okta.com/admin/dashboard
 
@@ -34,7 +34,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 11. Assigned Chronicle-admins group to the new application
 <img src="diagram/addgroup.png" width="500" height="200">
 
-11. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
+12. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
 <img src="diagram/copysaml.png" width="500" height="200">
 
 ## Usage
@@ -59,7 +59,7 @@ terraform plan
 terraform apply
 Copy the output of unique Workforce Pool ID to update the ACS & Entity values in Custom SAML app
 ```
-4. Update (Unique Workforce pool id will be created in next step) values for Single sign-on URL and Audience URI (SP Entity ID) in Okta
+4. Update Okta app with unique Workforce pool id values for Single sign-on URL and Audience URI (SP Entity ID)
 <img src="diagram/updateacsentity.png" width="900" height="200">
 
 
