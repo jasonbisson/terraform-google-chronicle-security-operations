@@ -35,7 +35,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 <img src="diagram/addgroup.png" width="500" height="200">
 
 12. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
-<img src="diagram/copysaml.png" width="600" height="300">
+<img src="diagram/copysaml.png" width="600" height="200">
 
 ## Usage
 
