@@ -1,12 +1,12 @@
 # Create Custom SAML Application for Chronicle Authetication 
 
-To autheticate into Chronicle a custom SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the native Workspace option, but will show required attribues and groups required.
+To autheticate into Chronicle a SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the Okat option, but will show required attribues and groups required.
 
 1. Login to Okta admin console. https://<Your Okta Instance>>.okta.com/admin/dashboard
 
 2. Go to Directory -> Groups
 
-3. Create a Google Group "Chronicle-admins" (Copy and paste name) and add People to the group
+3. Create a Okta Group "Chronicle-admins" (Copy and paste name) and add People to the group
 
 4. Go to Applications and click on Applications
 <img src="diagram/applications.png" width="300" height="200">
@@ -30,6 +30,9 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 
 10. Save application -> Click Sign On -> Click on view SAML setup instructions on right side
 <img src="diagram/samlsetup.png" width="500" height="200">
+
+11. Assigned Chronicle-admins group to the new application
+<img src="diagram/addgroup.png" width="500" height="200">
 
 11. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
 <img src="diagram/copysaml.png" width="500" height="200">
