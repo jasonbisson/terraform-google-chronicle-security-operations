@@ -31,11 +31,11 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 10. Save application -> Click Sign On -> Click on view SAML setup instructions on right side
 <img src="diagram/samlsetup.png" width="300" height="200">
 
-11. Assigned Chronicle-admins group to the new application
-<img src="diagram/addgroup.png" width="500" height="200">
-
-12. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
+11. Copy IDP metadata for variable idp_metadata_xml in terraform.tfvars.
 <img src="diagram/copysaml.png" width="600" height="100">
+
+12. Assigned Chronicle-admins group to the new application
+<img src="diagram/addgroup.png" width="500" height="200">
 
 ## Usage
 
