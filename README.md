@@ -112,24 +112,24 @@ gcloud iam service-accounts keys create - --iam-account="${service_account_name}
 - `roles/resourcemanager.projectCreator` Project creator role
 
 #### Fine grain Organization Permissions 
-iam.roles.delete
-iam.roles.get
-iam.roles.undelete
-iam.roles.update
-iam.workforcePoolProviders.create
-iam.workforcePoolProviders.delete
-iam.workforcePoolProviders.get
-iam.workforcePools.create
-iam.workforcePools.delete
-iam.workforcePools.get
-resourcemanager.organizations.setIamPolicy
+- iam.roles.delete
+- iam.roles.get
+- iam.roles.undelete
+- iam.roles.update
+- iam.workforcePoolProviders.create
+- iam.workforcePoolProviders.delete
+- iam.workforcePoolProviders.get
+- iam.workforcePools.create
+- iam.workforcePools.delete
+- iam.workforcePools.get
+- resourcemanager.organizations.setIamPolicy
 
 #### Fine grain Project Permissions
-iam.serviceAccounts.create
-iam.serviceAccounts.delete
-iam.serviceAccounts.get
-orgpolicy.policy.set
-resourcemanager.projects.setIamPolicy
-serviceusage.operations.get
-serviceusage.services.enable
-serviceusage.services.get
+- iam.serviceAccounts.create
+- iam.serviceAccounts.delete
+- iam.serviceAccounts.get
+- orgpolicy.policy.set
+- resourcemanager.projects.setIamPolicy
+- serviceusage.operations.get
+- serviceusage.services.enable
+- serviceusage.services.get
