@@ -7,7 +7,7 @@ This repository will deploy the required Google Cloud Infrastructure resources a
 
 The resources/services/activations/deletions that this module will create/trigger in dedicated project for Chronicle:
 - Enable the required Google Cloud API Services
-- Create a Workforce Identity Pool 
+- Create a Workforce Identity Pool
 - Create a Workforce Identity Provider with unique attributes required for Chronicle Security Operations
 - Update IAM policy to link Workforce members to Google Cloud role Chronicle Viewer
 - Disable organizational policy conditions (aka guardrails) to allow the creation of Service Accounts and Keys
@@ -17,11 +17,11 @@ The resources/services/activations/deletions that this module will create/trigge
 
 ## Prerequisites
 
-### Create a Google Cloud project 
+### Create a Google Cloud project
 
 Create a Google Cloud Project with [Project Factory](https://github.com/terraform-google-modules/terraform-google-project-factory) or an exiting pipeline for create Google Cloud projects.
 
-### Create Custom SAML Application for Chronicle Authetication 
+### Create Custom SAML Application for Chronicle Authetication
 
 To autheticate into Chronicle a custom SAML application will be required to integrate into the Workforce Identity provider. The custom SAML application can be created in any identity provider such as Workspace, Okta, or Azure. However, in this example we will use the native Workspace option, but will show required attribues and groups required.
 
@@ -43,7 +43,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 7. Download Metadata XML file for Workforce Integration
 <img src="diagram/downloadmetadata.png" width="700" height="400">
 
-8. Enter placeholder (Unique Workforce pool id will be created in next step) values for ACS URL and Entity ID. 
+8. Enter placeholder (Unique Workforce pool id will be created in next step) values for ACS URL and Entity ID.
 - ACS URL: https://auth.backstory.chronicle.security/signin-callback/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 - Entity ID: https://iam.googleapis.com/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 
@@ -53,11 +53,11 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 <img src="diagram/attributes.png" width="700" height="400">
 
 ### Alternative Identity providers
-- [Okta Identity provider](/examples/okta/README.md) 
+- [Okta Identity provider](/examples/okta/README.md)
 
 ## Usage
 
-### 
+###
 1. Clone repo
 ```
 git clone https://github.com/jasonbisson/terraform-google-chronicle-security-operations.git
@@ -105,7 +105,7 @@ gcloud iam service-accounts keys create - --iam-account="${service_account_name}
 - `roles/orgpolicy.policyAdmin` on GCP Organization
 - `roles/iam.workforcePoolAdmin` Workforce Pool Admin
 - `roles/iam.serviceAccountCreator` Create Service accounts and keys
-- `roles/serviceusage.serviceUsageAdmin` Service Usage Admin 
+- `roles/serviceusage.serviceUsageAdmin` Service Usage Admin
 
 ### Optional IAM Roles
 - `roles/billing.user` to create Google Cloud project if needed
@@ -113,7 +113,7 @@ gcloud iam service-accounts keys create - --iam-account="${service_account_name}
 
 ### Fine grain option
 
-#### Fine grain Organization Permissions 
+#### Fine grain Organization Permissions
 - iam.roles.delete
 - iam.roles.get
 - iam.roles.undelete

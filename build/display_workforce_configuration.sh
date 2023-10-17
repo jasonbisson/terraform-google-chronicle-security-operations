@@ -18,10 +18,10 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-export organization=$1 
+export organization=$1
 export pool_name=$(gcloud iam workforce-pools list --organization=${organization} --location=global --format=json |jq -r .[].name | awk -F '/' '{print $4}')
-for x in pool_name 
-do 
+for x in pool_name
+do
     export location=$(gcloud iam workforce-pools list --organization=${organization} --location=global --format=json |jq -r .[].name | awk -F '/' '{print $2}')
 
     gcloud iam workforce-pools describe ${pool_name} --location=${location}
