@@ -1,6 +1,5 @@
 project_id        = "your project id"
 org_id            = "your org id"
-idp_metadata_xml = "Your IDP Metadata string. Use my script in build folder to print out string"
 location          = "global"
 workforce_pool_id = "chronicle"
 workforce_provider_id = "chronicle"
