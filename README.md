@@ -89,8 +89,41 @@ export service_account_name=$(terraform  output -raw service_account)
 export project_id=$(terraform  output -raw project_id)
 gcloud iam service-accounts keys create - --iam-account="${service_account_name}"
 ```
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Inputs
 
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| activate\_apis | The list of apis to activate for Cloud Function | `list(string)` | <pre>[<br>  "sts.googleapis.com",<br>  "iamcredentials.googleapis.com",<br>  "cloudresourcemanager.googleapis.com",<br>  "iam.googleapis.com",<br>  "cloudasset.googleapis.com",<br>  "securitycenter.googleapis.com",<br>  "pubsub.googleapis.com",<br>  "compute.googleapis.com",<br>  "recommender.googleapis.com",<br>  "policyanalyzer.googleapis.com"<br>]</pre> | no |
+| attribute\_mapping | attribute list | `map(string)` | n/a | yes |
+| description | Description of the Pool | `string` | `"Chronicle Single Sign On"` | no |
+| disable\_dependent\_services | Whether services that are enabled and which depend on this service should also be disabled when this service is destroyed. https://www.terraform.io/docs/providers/google/r/google_project_service.html#disable_dependent_services | `string` | `"false"` | no |
+| disable\_services\_on\_destroy | Whether project services will be disabled when the resources are destroyed. https://www.terraform.io/docs/providers/google/r/google_project_service.html#disable_on_destroy | `string` | `"false"` | no |
+| disabled | Enable the Workforce Pool | `bool` | `false` | no |
+| display\_name | Display name of the Pool | `string` | `"Chronicle Single Sign On"` | no |
+| enable\_apis | Whether to actually enable the APIs. If false, this module is a no-op. | `string` | `"true"` | no |
+| idp\_metadata\_xml | How to print out in one string. Copy print\_metadata\_xml.py script under build directory to /tmp with your idp metadata file named GoogleIDPMetadata.xml. Run script to print out in one line | `string` | n/a | yes |
+| location | Location of the Workforce Pool | `string` | n/a | yes |
+| org\_id | The numeric organization id | `string` | n/a | yes |
+| prefix | Prefix member or group or serviceaccount | `string` | `"principalSet"` | no |
+| project\_id | Google Cloud Project where Workforce Identity pool and provider will be deployed | `any` | n/a | yes |
+| role | IAM role for Chronicle Viewer | `string` | `"roles/chronicle.viewer"` | no |
+| session\_duration | Session Duration | `string` | `"3600s"` | no |
+| soar\_service\_account | Name of Service Account for SOAR to Google Cloud | `string` | `"soar2googlecloud"` | no |
+| workforce\_pool\_id | workforce pool id | `string` | n/a | yes |
+| workforce\_provider\_id | workforce provider id | `string` | n/a | yes |
 
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| pool\_id | Pool id |
+| pool\_name | Pool name |
+| pool\_state | Pool state |
+| project\_id | Name of Google Cloud Project ID for Chronicle resources |
+| service\_account | Name of SOAR Service Account to access Google Cloud Organization |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Requirements
 
