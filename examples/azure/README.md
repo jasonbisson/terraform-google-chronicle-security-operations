@@ -30,7 +30,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 9. Click on Enterprise Applications -> New Application you created above for Chronicle -> Add "Chronicle-Admins" group
 
 10. Click on New Application you created above for Chronicle -> Sign Sign on -> Download Federation Metadata XML in SAML section
-<img src="diagram/downloadsamlxml.png" width="200" height="200">
+<img src="diagram/downloadsamlxml.png" width="100" height="100">
 
 ## Usage
 
