@@ -19,7 +19,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 - Identifier (Entity ID) : https://iam.googleapis.com/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 - Reply URL (Assertion Consumer Service URL) : https://auth.backstory.chronicle.security/signin-callback/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
 - Relay State: https://console.cloud.google/
-<img src="diagram/basicsaml.png" width="400" height="200">
+<img src="diagram/basicsaml.png" width="500" height="200">
 
 7. Update the attribues with the identical names (High rate of failure in this step).
 <img src="diagram/attributes.png" width="500" height="400">
