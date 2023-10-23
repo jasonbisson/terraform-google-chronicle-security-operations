@@ -7,7 +7,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 2. Go to Microsoft Entra ID -> Groups -> New group
 
 3. Create a Security Group "Chronicle-admins" (Copy and paste name) and add members to the group
-<img src="diagram/creategroup.png" width="300" height="200">
+<img src="diagram/creategroup.png" width="300" height="300">
 
 4. Go to Microsoft Entra ID -> Enterprise applications -> Create your own application 
 <img src="diagram/customapp.png" width="300" height="200">
