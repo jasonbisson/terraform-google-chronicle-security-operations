@@ -54,7 +54,7 @@ To autheticate into Chronicle a custom SAML application will be required to inte
 
 ### Alternative Identity providers
 - [Okta Identity provider](/examples/okta/README.md)
-
+- [Azure Identity provider](/examples/azure/README.md)
 ## Usage
 
 ###
