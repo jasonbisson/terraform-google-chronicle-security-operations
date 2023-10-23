@@ -13,7 +13,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 <img src="diagram/customapp.png" width="300" height="400">
 
 5. Click on Single Sign-on -> SAML
-<img src="diagram/saml.png" width="300" height="100">
+<img src="diagram/saml.png" width="200" height="100">
 
 6. Enter placeholders (Unique Workforce pool id will be created in next step) values for Basic SAML.
 - Identifier (Entity ID) : https://iam.googleapis.com/locations/global/workforcePools/your_unique_workforce_pool_id/providers/chronicle
