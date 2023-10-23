@@ -10,7 +10,7 @@ To autheticate into Chronicle a SAML application will be required to integrate i
 <img src="diagram/creategroup.png" width="400" height="300">
 
 4. Go to Microsoft Entra ID -> Enterprise applications -> Create your own application 
-<img src="diagram/customapp.png" width="500" height="300">
+<img src="diagram/customapp.png" width="300" height="400">
 
 5. Click on Single Sign-on -> SAML
 <img src="diagram/saml.png" width="300" height="100">
