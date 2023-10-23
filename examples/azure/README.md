@@ -55,7 +55,7 @@ terraform apply
 Copy the output of unique Workforce Pool ID to update the ACS & Entity values in Azure Enterprise Application
 ```
 4. Update Azure Enterprise Application with unique Workforce pool id values for Single sign-on URL and Audience URI (SP Entity ID)
-<img src="diagram/updatebasicsaml.png" width="900" height="200">
+<img src="diagram/updatebasicsaml.png" width="500" height="200">
 
 
 
