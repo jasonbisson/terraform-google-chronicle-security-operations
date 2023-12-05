@@ -20,10 +20,10 @@ terraform {
     google = {
       // version 4.31.0 removed because of issue https://github.com/hashicorp/terraform-provider-google/issues/12226
       source  = "hashicorp/google"
-      version = "4.83.0"
+      version = "5.8.0"
     }
     google-beta = {
-      version = "4.84.0"
+      version = "5.8.0"
     }
   }
 }

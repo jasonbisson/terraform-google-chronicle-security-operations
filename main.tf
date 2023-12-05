@@ -18,6 +18,13 @@ resource "random_id" "random_suffix" {
   byte_length = 4
 }
 
+resource "random_string" "string_suffix" {
+  length  = 4
+  special = false
+  upper   = false
+}
+
+
 resource "google_project_service" "project_services" {
   project                    = var.project_id
   count                      = var.enable_apis ? length(var.activate_apis) : 0
@@ -34,6 +41,12 @@ resource "google_iam_workforce_pool" "pool" {
   description       = var.description
   disabled          = var.disabled
   session_duration  = var.session_duration
+  access_restrictions {
+    allowed_services {
+      domain = "backstory.chronicle.security"
+    }
+    disable_programmatic_signin = false
+  }
 }
 
 resource "google_iam_workforce_pool_provider" "provider" {
@@ -81,7 +94,7 @@ resource "google_service_account" "soar_to_google_cloud" {
 
 resource "google_organization_iam_custom_role" "iam_custom_role" {
   org_id      = var.org_id
-  role_id     = "SOAR_Custom_Role"
+  role_id     = "SOAR_Custom_Role${random_string.string_suffix.result}"
   title       = "SOAR Custom IAM Role"
   description = "Custom IAM role for managing connections from Chronicle SOAR to Nexus"
   permissions = ["cloudasset.assets.searchAllResources", "compute.instances.get", "compute.instances.list", "compute.instances.stop", "compute.zones.list", "iam.serviceAccounts.disable", "policyanalyzer.serviceAccountLastAuthenticationActivities.query", "pubsub.subscriptions.consume", "pubsub.subscriptions.create", "pubsub.subscriptions.delete", "pubsub.subscriptions.get", "pubsub.subscriptions.getIamPolicy", "pubsub.subscriptions.list", "pubsub.subscriptions.setIamPolicy", "pubsub.subscriptions.update", "pubsub.topics.attachSubscription", "pubsub.topics.create", "pubsub.topics.delete", "pubsub.topics.detachSubscription", "pubsub.topics.get", "pubsub.topics.getIamPolicy", "pubsub.topics.list", "pubsub.topics.publish", "pubsub.topics.setIamPolicy", "pubsub.topics.update", "pubsub.topics.updateTag", "recommender.iamPolicyRecommendations.get", "recommender.iamPolicyRecommendations.list", "recommender.iamPolicyRecommendations.update", "resourcemanager.organizations.getIamPolicy", "securitycenter.assets.list", "securitycenter.findingexternalsystems.update", "securitycenter.findings.list", "securitycenter.findings.setState", "securitycenter.notificationconfig.create", "securitycenter.notificationconfig.get", "securitycenter.notificationconfig.update"]

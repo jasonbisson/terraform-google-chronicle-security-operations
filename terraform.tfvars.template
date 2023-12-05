@@ -11,5 +11,3 @@ attribute_mapping = {
   "attribute.user_email" = "assertion.attributes.user_email[0]"
   "google.groups"        = "assertion.attributes.group"
 }
-
-
